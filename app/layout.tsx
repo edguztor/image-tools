@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 
-const siteUrl = "https://image-tools-gratis.vercel.app";
+const siteUrl = "https://image-tools-lyart.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "ImagenGratis",
     locale: "es_MX",
   },
-  verification: {},
+  verification: { google: "zel00yVDEZH37EwPriiDFQGBojDNpYQa5n5oz7KcpDc" },
   alternates: { canonical: siteUrl },
 };
 
