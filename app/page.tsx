@@ -6,7 +6,7 @@ import AdBanner from "@/components/AdBanner";
 
 // 👉 Reemplaza este valor con tu Slot ID real de AdSense
 //    AdSense → Anuncios → Por unidad de anuncio → Anuncios display → copia el data-ad-slot
-const AD_SLOT = "2956781430";
+const AD_SLOT = "7687220224";
 import ComprimirTool from "@/components/ComprimirTool";
 import ConvertirTool from "@/components/ConvertirTool";
 import WebpTool from "@/components/WebpTool";
