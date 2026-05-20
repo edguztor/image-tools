@@ -42,6 +42,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "ImagenGratis",
+            "url": "https://image-tools-lyart.vercel.app",
+            "description": "Herramientas de imagen online gratuitas: comprime, convierte, redimensiona y edita imágenes sin registro.",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "MXN" },
+            "featureList": [
+              "Comprimir imágenes JPG PNG WebP",
+              "Convertir formato de imagen",
+              "Convertir a WebP",
+              "Convertir HEIC a JPG",
+              "Redimensionar imagen",
+              "Recortar imagen",
+              "Rotar imagen",
+              "Añadir marca de agua"
+            ]
+          })}}
+        />
         <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
           <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2 font-bold text-xl">

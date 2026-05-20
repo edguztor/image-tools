@@ -2,6 +2,11 @@
 
 import { useState, useRef } from "react";
 import Link from "next/link";
+import AdBanner from "@/components/AdBanner";
+
+// 👉 Reemplaza este valor con tu Slot ID real de AdSense
+//    AdSense → Anuncios → Por unidad de anuncio → Anuncios display → copia el data-ad-slot
+const AD_SLOT = "2956781430";
 import ComprimirTool from "@/components/ComprimirTool";
 import ConvertirTool from "@/components/ConvertirTool";
 import WebpTool from "@/components/WebpTool";
@@ -58,6 +63,9 @@ export default function Home() {
         </p>
       </div>
 
+      {/* Anuncio superior */}
+      <AdBanner slot={AD_SLOT} format="horizontal" className="mb-8 rounded-xl overflow-hidden min-h-[90px] bg-gray-50" />
+
       {/* Grid de herramientas */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
         {tools.map(tool => (
@@ -91,6 +99,11 @@ export default function Home() {
           </div>
           {toolComponents[activeTool]}
         </div>
+      )}
+
+      {/* Anuncio entre herramientas e info */}
+      {!activeTool && (
+        <AdBanner slot={AD_SLOT} format="rectangle" className="my-8 rounded-xl overflow-hidden min-h-[250px] bg-gray-50" />
       )}
 
       {/* Info SEO */}
