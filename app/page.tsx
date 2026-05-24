@@ -15,6 +15,7 @@ import RedimensionarTool from "@/components/RedimensionarTool";
 import RecortarTool from "@/components/RecortarTool";
 import RotarTool from "@/components/RotarTool";
 import MarcaAguaTool from "@/components/MarcaAguaTool";
+import RemoverFondoTool from "@/components/RemoverFondoTool";
 
 const tools = [
   { id: "comprimir",     icon: "🗜️", label: "Comprimir",       desc: "Reduce el peso de JPG, PNG y WebP",     color: "#7c3aed", bg: "bg-purple-50",  border: "border-purple-200" },
@@ -25,6 +26,7 @@ const tools = [
   { id: "recortar",      icon: "✂️", label: "Recortar",         desc: "Recorta la imagen a medida exacta",     color: "#dc2626", bg: "bg-red-50",     border: "border-red-200" },
   { id: "rotar",         icon: "↻",  label: "Rotar / Voltear",  desc: "Gira o voltea tu imagen fácilmente",   color: "#7c3aed", bg: "bg-violet-50",  border: "border-violet-200" },
   { id: "marca-agua",    icon: "💧", label: "Marca de Agua",    desc: "Añade texto o logo a tu imagen",        color: "#0d9488", bg: "bg-teal-50",    border: "border-teal-200" },
+  { id: "remover-fondo", icon: "✂️", label: "Remover Fondo",    desc: "Elimina el fondo con IA automáticamente", color: "#7c3aed", bg: "bg-violet-50",  border: "border-violet-200" },
 ];
 
 const toolComponents: Record<string, React.ReactNode> = {
@@ -36,6 +38,7 @@ const toolComponents: Record<string, React.ReactNode> = {
   recortar:      <RecortarTool />,
   rotar:         <RotarTool />,
   "marca-agua":  <MarcaAguaTool />,
+  "remover-fondo": <RemoverFondoTool />,
 };
 
 export default function Home() {
